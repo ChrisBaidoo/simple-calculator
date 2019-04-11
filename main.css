@@ -6,6 +6,15 @@ body {
   margin: 0;
 }
 
+input {
+  border: 1px solid gray;
+  padding: 3px 5px;
+}
+
+input.invalid {
+  border-color: red;
+}
+
 .flex-container{
   height: 100%;
   padding: 0;
@@ -13,5 +22,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+}
 
+.result{
+  border: 1px solid grey;
+  padding: 10px;
+  margin-top: 30px;
 }
