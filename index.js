@@ -7,8 +7,8 @@ function calc(){
   var val2  = parseFloat(value2.value); //get the value from 2nd Value. change to number
   var operator = document.querySelector("#operator").value; //get the value from the operator
   var result = document.querySelector("#result");
-  var val1IsInvalid = !Number.isInteger(val1);
-  var val2IsInvalid = !Number.isInteger(val2);
+  var val1IsInvalid = !Number.isInteger(val1); //check that val1 is not an interger
+  var val2IsInvalid = !Number.isInteger(val2); //check that val2 is not an interger
 
   /*** Clear Form ***/
   value1.classList.remove("invalid");
@@ -52,7 +52,39 @@ function calc(){
       break;
   }
 
-  /*** Set Result ***/
-  result.innerHTML = calculate;
+  /*** Validate Form ***/
 
+  result.innerHTML = calculate;
+}
+
+function calculate(){
+  let equation = document.querySelector("#input").value;
+  let equationArray = equation.split("");
+  //Refactor using Array.reduce() method
+  equationArray = equationArray.map(item => {
+    const integer = parseFloat(item);
+    if (isNaN(integer)){
+      return item;
+    } else {
+      return integer;
+    }
+  });
+}
+
+
+function getNumber({value}) {
+  let currentNumber = document.querySelector("#input").value;
+  let lastCharacter = currentNumber.charAt(currentNumber.length - 1)
+  let operators = ["*", "/", "+", "-"];
+
+  if (operators.includes(value) && operators.includes(lastCharacter)) {
+    currentNumber = currentNumber.substring(0, currentNumber.length - 1);
+  }
+
+  document.querySelector("#input").value = `${currentNumber}${value}`;
+}
+
+let operator;
+function getOper({value}) {
+  operator = value;
 }

@@ -2,6 +2,15 @@ html, body {
   height: 100%;
 }
 
+table {
+width: 310px;
+margin:50px auto;
+background: #663399;
+border: none;
+border-radius: 10px;
+padding: 0px 20px;
+}
+
 body {
   margin: 0;
 }
@@ -15,18 +24,60 @@ input.invalid {
   border-color: red;
 }
 
-.flex-container{
+.flex-container {
   height: 100%;
   padding: 0;
   margin: 0;
+  /* background: #663399; */
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  font-size: 20px;
 }
 
 .result{
   border: 1px solid grey;
   padding: 10px;
   margin-top: 30px;
+}
+
+.yourname{
+  border: 1px solid grey;
+  padding: 10px;
+  margin-top: 30px;
+}
+
+#input, #answer {
+  width: 260px;
+  height: 50px;
+  font-size: 210%;
+  text-align: right;
+  border: none;
+}
+
+#input {
+  border-radius: 5px 5px 0px 0px;
+  box-shadow: 2px 2px 2px black;
+  color: gray;
+}
+
+#answer {
+  border-radius: 0px 0px 5px 5px;
+  box-shadow: 2px 2px 2px black;
+}
+
+input[type=button] {
+  height: 60px;
+  width: 60px;
+  color: blue;
+  background: white;
+  margin: 1px;
+  border-radius: 8px;
+  border: none;
+}
+
+input[type=button]:hover{
+  background: gray;
+  cursor: pointer;
 }

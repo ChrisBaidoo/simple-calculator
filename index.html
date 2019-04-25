@@ -6,25 +6,86 @@
 </head>
 
 <body>
+
   <div class="flex-container">
-    <form>
-      Value 1 <input type="number" id="value1">
-      Value 2 <input type="number" id="value2">
-      Operator:
-      <select id="operator">
-        <option value="add">Add</option>
-        <option value="sub">Subtract</option>
-        <option value="div">Divide</option>
-        <option value="mul">Multiply</option>
-      </select>
-      <button type="button" id="btn" onclick="calc()">Calculate</button>
-    </form>
-    <div id="result" class="result"></div>
+      Value 1 <input type="text" id="name">
+      <div id="yourname" class="yourname"></div>
+      <!-- Test <input type="text" id="name">
+      Name  <p id="yourname"></p> -->
+      <button type="button" id="btn" onclick="printName()">Name</button>
+    </div>
 
-    <img src="img/Calculator.png" width="300px" class="result">
-  </div>
+    <div class="flex-container">
+      <form>
+        Value 1 <input type="number" id="value1">
+        Value 2 <input type="number" id="value2">
+        Operator:
+        <select id="operator">
+          <option value="add">Add</option>
+          <option value="sub">Subtract</option>
+          <option value="div">Divide</option>
+          <option value="mul">Multiply</option>
+        </select>
+        <button type="button" id="btn" onclick="calc()">Calculate</button>
+      </form>
+      <div id="result" class="result"></div>
 
-  <script type="text/javascript" src="index.js"></script>
+      <img src="img/Calculator.png" width="300px" class="result">
+
+      <!-- This is the head section of the calculator -->
+      <table class="result">
+        <tr>
+          <tr>
+            <td class="heading">Simple Calculator</td>
+          </tr>
+          <td>
+            <input type="text" id="input" placeholder="0" readonly="readonly">
+            <input type="text" id="answer" readonly="readonly" style="color: green;">
+          </td>
+        </tr>
+
+        <!--Button section of the calculator -->
+        <tr>
+          <td>
+            <input type="button" value="7" onclick="getNumber(this)">
+            <input type="button" value="8" onclick="getNumber(this)">
+            <input type="button" value="9" onclick="getNumber(this)">
+            <input type="button" value="/" onclick="getNumber(this)">
+            <br>
+            <input type="button" value="4" onclick="getNumber(this)">
+            <input type="button" value="5" onclick="getNumber(this)">
+            <input type="button" value="6" onclick="getNumber(this)">
+            <input type="button" value="*" onclick="getNumber(this)">
+            <br>
+            <input type="button" value="1" onclick="getNumber(this)">
+            <input type="button" value="2" onclick="getNumber(this)">
+            <input type="button" value="3" onclick="getNumber(this)">
+            <input type="button" value="-" onclick="getNumber(this)">
+            <br>
+            <input type="button" value="0" onclick="getNumber(this)">
+            <input type="button" value="." onclick="getNumber(this)">
+            <input type="button" value="=" onclick="calculate()">
+            <input type="button" value="+" onclick="getNumber(this)">
+            <br>
+          </td>
+        </tr>
+      </table>
+
+    </div>
+
+    <div>
+      <!-- <table class="result">
+      <tr>
+      <tr>
+      <td class="heading"> Simple Calculator
+    </td>
+
+  </tr>
+</tr>
+</table> -->
+
+</div>
+<script type="text/javascript" src="index.js"></script>
 </body>
 
 </html>
