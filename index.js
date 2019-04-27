@@ -71,6 +71,11 @@ function calculate(){
   });
 }
 
+function clearScreen() {
+  document.querySelector("#input").value = "";
+  document.querySelector("#answer").value = "";
+}
+
 
 function getNumber({value}) {
   let currentNumber = document.querySelector("#input").value;
