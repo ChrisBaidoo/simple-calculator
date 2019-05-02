@@ -2,13 +2,42 @@ html, body {
   height: 100%;
 }
 
-table {
-width: 310px;
-margin:50px auto;
-background: #663399;
-border: none;
-border-radius: 10px;
-padding: 0px 20px;
+.calculator {
+  margin:50px auto;
+  border: 1px solid;
+  padding: 20px;
+  width: 300px;
+}
+
+.answers {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid;
+}
+
+.answers .input,
+.answers .answer {
+  height: 30px;
+  font-size: 2rem;
+  text-align: right;
+  border: none;
+}
+input[type="button"] {
+  width: 22%;
+  font-size: 13px;
+  padding: 7px 0;
+  background-color: #f4f4f4;
+  border: 1px solid #eee;
+}
+
+input[type="button"].btn-darkgray{
+  background-color: #d5d5d5;
+  border: 1px solid #c8c8c8;
+}
+.calculator-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
 }
 
 body {
@@ -48,26 +77,8 @@ input.invalid {
   margin-top: 30px;
 }
 
-#input, #answer {
-  width: 260px;
-  height: 50px;
-  font-size: 210%;
-  text-align: right;
-  border: none;
-}
 
-#input {
-  border-radius: 5px 5px 0px 0px;
-  box-shadow: 2px 2px 2px black;
-  color: gray;
-}
-
-#answer {
-  border-radius: 0px 0px 5px 5px;
-  box-shadow: 2px 2px 2px black;
-}
-
-input[type=button] {
+/* input[type=button] {
   height: 60px;
   width: 60px;
   color: blue;
@@ -80,4 +91,4 @@ input[type=button] {
 input[type=button]:hover{
   background: gray;
   cursor: pointer;
-}
+} */

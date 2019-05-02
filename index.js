@@ -1,3 +1,6 @@
+
+  var result = document.querySelector("#result");
+
 function calc(){
   var calculate;
   var value1 = document.querySelector("#value1");
@@ -59,16 +62,25 @@ function calc(){
 
 function calculate(){
   let equation = document.querySelector("#input").value;
-  let equationArray = equation.split("");
-  //Refactor using Array.reduce() method
-  equationArray = equationArray.map(item => {
-    const integer = parseFloat(item);
-    if (isNaN(integer)){
-      return item;
-    } else {
-      return integer;
-    }
-  });
+  let result = document.querySelector("#answer");
+  let answer = eval(equation)
+  result.value = answer;
+
+
+  // document.querySelector("#answer").innerHTML = answer;
+
+
+  //
+  // let equationArray = equation.split("");
+  // //Refactor using Array.reduce() method
+  // equationArray = equationArray.map(item => {
+  //   const integer = parseFloat(item);
+  //   if (isNaN(integer)){
+  //     return item;
+  //   } else {
+  //     return integer;
+  //   }
+  // });
 }
 
 function clearScreen() {
@@ -81,7 +93,7 @@ function getNumber({value}) {
   let currentNumber = document.querySelector("#input").value;
   let lastCharacter = currentNumber.charAt(currentNumber.length - 1)
   let operators = ["*", "/", "+", "-"];
-
+//check if the value clicked is a *,/,+,-
   if (operators.includes(value) && operators.includes(lastCharacter)) {
     currentNumber = currentNumber.substring(0, currentNumber.length - 1);
   }
