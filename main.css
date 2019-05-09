@@ -32,8 +32,15 @@ input[type="button"] {
 
 input[type="button"].btn-darkgray{
   background-color: #d5d5d5;
-  border: 1px solid #c8c8c8;
+  border-color: #c8c8c8;
 }
+
+input[type="button"].btn-blue{
+  background-color: #4a8df7;
+  border-color: #367def;
+  color: #ffffff;
+}
+
 .calculator-row {
   display: flex;
   justify-content: space-between;

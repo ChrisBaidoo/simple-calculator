@@ -63,7 +63,8 @@ function calc(){
 function calculate(){
   let equation = document.querySelector("#input").value;
   let result = document.querySelector("#answer");
-  let answer = eval(equation)
+  equation = equation.replace(/x/g, "*").replace(/÷/g, "/");
+  let answer = eval(equation);
   result.value = answer;
 
 
